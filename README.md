@@ -7,6 +7,6 @@ https://zhelukevich.github.io/interactive-elements/
 
 - Работа с Yandex-картой
 
-API Яндекс карт - (https://yandex.ru/dev/maps/jsapi/doc/2.1/quick-start/index.html)
+API Яндекс карт - (https://yandex.ru/dev/maps/jsapi/doc/2.1/quick-start/index.html) <br>
 Сервис для определения координат - https://yandex.ru/map-constructor/location-tool/
 
