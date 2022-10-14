@@ -1,0 +1,415 @@
+html{
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto&display=swap');
+
+body{
+  background: #424242;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+
+}
+
+/* glob
+ =======================================*/
+
+ .list-reset{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+ }
+
+.btn-reset{
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+ }
+
+.flex{
+  display: flex;
+}
+
+.container{
+  Width: 2678px;
+ margin: 70px 92px;
+}
+
+.parents__base{
+  align-items: flex-start;
+}
+
+.parents__base:not(:last-child){
+  margin-right: 58px;
+}
+
+/* checkbox
+========================= */
+
+.checkbox{
+  width: 176px;
+  min-height: 309px;
+  padding-top: 21px;
+  padding-left: 30px;
+  background: #FFFFFF;
+  border-radius: 10px;
+}
+
+
+.checkbox__title{
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #333333;
+}
+
+
+.checkbox__item:not(:last-child){
+  margin-bottom: 20px;
+}
+
+.checkbox__other{
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer;
+}
+
+.check{
+  display: none;
+}
+
+.check + span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999999;
+  border-radius: 3px;
+  transition: border 0.2s ease-in-out;
+}
+
+
+.check:hover + span{
+  border: 1px solid #CCB26E;
+}
+
+
+
+.check + span::before{
+  content: '';
+  position: absolute;
+  top: -1px;
+  right: 0;
+  bottom: 0;
+  left: -1px;
+  opacity: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #CCB26E;
+  border-radius: 3px;
+  background-image: url("../img/check.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: opasity 0.2s ease-in-out;
+}
+
+.check:checked + span::before{
+  opacity: 1;
+}
+
+/* select
+========== */
+
+
+
+.choices{
+  min-width: 176px;
+  margin: 0;
+}
+
+
+.choices__inner{
+  border: none;
+  border-radius: 10px;
+}
+
+.choices__list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.choices__list--single {
+  display: inline-block;
+  padding: 0;
+  padding-top: 5px;
+  width: 100%;
+}
+
+.choices__inner {
+  padding: 7.5px 15px 3.75px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #333333;
+}
+
+.choices__placeholder {
+  opacity: 1;
+}
+
+
+
+.choices__list--dropdown, .choices__list[aria-expanded] {
+  visibility: hidden;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  padding-top: 10px;
+  border: 1px solid #CCB26E !important;
+  top: 35px;
+  margin-top: -1px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  word-break: break-all;
+  will-change: visibility;
+}
+
+.choices[data-type*=select-one]::after {
+  top: 9px;
+ border: none;
+ margin-top: 0;
+ width: 13px;
+ height: 13px;
+ background-image: url('../img/Rectangle\ 141\ \(1\).svg');
+ background-position: center;
+ background-size: cover;
+ background-repeat: no-repeat;
+transform: translateY(50%);
+}
+
+.choices[data-type*=select-one].is-open::after {
+z-index: 10;
+border: none;
+margin: 0;
+background-image: url('../img/Rectangle\ 141.svg');
+}
+
+.is-open .choices__inner{
+  position: relative;
+  z-index: 5;
+  border-radius: 10px;
+  border: 1px solid #CCB26E;
+ }
+
+
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+  padding-right: 20px;
+}
+
+/* .is-open .choices__inner {
+  border-radius: 10px;
+  border: 1px solid #CCB26E;
+}
+.is-flipped.is-open .choices__inner {
+  border-radius: 10px;
+  border: 1px solid #CCB26E;
+} */
+
+
+/* map
+============== */
+
+[class*="ground-pane"]{
+  filter: grayscale(1);
+}
+
+
+/* scroll
+================== */
+.scroll__custom{
+  width: 399px;
+  height: 310px;
+  padding: 20px 30px;
+  padding-right: 35px;
+  background-color: #FFFFFF;
+}
+
+
+.scroll__taxt{
+  margin: 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 170%;
+  color: #333333;
+}
+
+.simplebar-scrollbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-height: 50px;
+}
+
+.simplebar-scrollbar::before {
+  background: #CCB26E;
+  border-radius: 5px;
+  width: 6px;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  /* When hovered, remove all transitions from drag handle */
+  opacity: 1;
+  transition: opacity 0s linear;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 7px;
+  bottom: 7px;
+}
+
+.simplebar-track.simplebar-vertical {
+  top: 0;
+  right: 0;
+  width: 12px;
+}
+
+
+/* form
+============= */
+.form{
+  width: 440px;
+  min-height: 410px;
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, .4);
+  border-radius: 10px;
+}
+
+.form__block{
+  flex-direction: column;
+}
+
+.form__list{
+  margin-bottom: 31px;
+}
+
+.form__item:not(:last-child){
+  margin-bottom: 14px;
+}
+
+.form__title{
+  margin: 0;
+  margin-bottom: 5px;
+  padding-left: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight:400;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  color: #FF5C00;
+}
+
+.form__input{
+  width: 380px;
+  height: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #FFFFFF;
+  border: 1px solid #FF5C00;
+  border-radius: 10px;
+}
+
+
+
+
+.form__btn{
+  max-width: 192px;
+  height: 60px;
+  background: #FF5C00;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight:400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* tooltip
+================== */
+
+.tooltip{
+  position: relative;
+}
+
+.tooltip__text{
+  bottom: 50px;
+  width: 375px;
+  height: 160px;
+  background: #FFFFFF;
+  padding: 20px 78px 20px 28px;
+  margin: 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 170%;
+  color: #333333;
+}
+
+.tooltip__marker{
+  cursor: pointer;
+}
+
+
+.tooltip__popup{
+  position: absolute;
+  top: 50px;
+  left: 156px;
+  min-width:163px;
+  padding: 7px 17px;
+  background: #666;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0;
+}
+
+.tooltip__popup::before {
+  content: '';
+  position: absolute;
+  top: 29px;
+  left: 77.9px;
+  border:8px solid transparent;
+  border-top: 10px solid #666;
+
+ }
+
+.tooltip__marker:hover path{
+  fill: #CCB26E;
+}
+
+.tooltip__marker:hover + .tooltip__popup{
+  opacity: 1;
+}
