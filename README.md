@@ -20,7 +20,7 @@ API Яндекс карт - (https://yandex.ru/dev/maps/jsapi/doc/2.1/quick-star
 
 - Валидация формы
 
-Плагин для валидации - (https://just-validate.dev/)
+Плагин для валидации - (https://just-validate.dev/) <br>
 Плагин для маскирования - (https://github.com/RobinHerbots/Inputmask)
 
 
